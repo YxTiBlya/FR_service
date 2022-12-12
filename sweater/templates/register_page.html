@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="register_page">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+                <li><b>{{ message }}</b></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <li><b>REGISTRATION</b></li>
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST" class="profile_form">
+        <table>
+            <tr>
+                <td><input type="text" placeholder="Login" name="login"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Password" name="password"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Password retype" name="password2"></td>
+            </tr>
+            <tr>
+                <td><button class="btn" type="submit">Register</button></td>
+            </tr>
+            <tr>
+                <td><a href="/login">Sign In</a></td>
+            </tr>
+        </table>
+    </form>
+</div>
+{% endblock %}

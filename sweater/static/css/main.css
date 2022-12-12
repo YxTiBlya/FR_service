@@ -1,0 +1,306 @@
+body{
+    background: url("../img/background.jpg") no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Login & Register Page*/
+
+.login_page, .register_page{
+    position: relative;
+    width: 40%;
+    max-height: 90%;
+    top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+}
+
+.login_page li, .login_page ul, .register_page li, .register_page ul{
+    list-style-type: none;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.profile_form table{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.profile_form input{
+    width: 300px;
+    height: 30px;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.profile_form button{
+    background-color: rgba(0,0,0,0);;
+    color: white;
+    height: 30px;
+    width: 70px;
+    margin-top: 15px;
+    border: 2px solid white;
+    border-radius: 4px;
+    transition-duration: 0.6s;
+}
+
+.profile_form button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.profile_form td{
+    padding: 5px;
+}
+
+.profile_form a{
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 18px;
+    position: relative;
+    top: 5px;
+    transition-duration: 0.6s;
+}
+
+.profile_form a:hover{
+    text-decoration: underline;
+}
+
+/* NavBar */
+
+.nav{
+    display: inline-block;
+    margin-top: 10px;
+    max-height: 50px;
+    width: 100%;
+}
+
+.width_class{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav .logo a{
+    max-width: 300px;
+    height: 60px;
+    float: left;
+    display: flex;
+    text-decoration: none;
+}
+
+.logo h3{
+    font-size: 24px;
+    color: white;
+    margin: auto;
+    letter-spacing: 3px;
+}
+
+.nav_btn{
+    float: right;
+}
+.nav_btn ul{
+    display: flex;
+    letter-spacing: 2px;
+}
+.nav_btn li{
+    list-style: none;
+    margin: 5px;
+    transition: all .6s ease;
+}
+.nav_btn li a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.nav_btn li:hover{
+    transform: scale(1.05);
+}
+
+/* Main Page */
+
+.main_page{
+    position: relative;
+    width: 90%;
+    height: 250px;
+    top: 240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main_text, .second_text, .logout_button{
+    position: relative;
+    color:white;
+    text-align: center;
+}
+
+.main_text{
+    top: 80;
+    font-size: 54;
+    letter-spacing: 4px;
+}
+
+.second_text{
+    top: 90;
+    font-size: 24;
+    letter-spacing: 2px;
+}
+
+.logout_button{
+    top: 130;
+}
+
+.logout_button a{
+    background-color: rgba(0,0,0,0);
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 5px 24px;
+    letter-spacing: 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.6s;
+    text-decoration: none;
+}
+
+.logout_button a:hover {
+    color:black;
+    background-color: white;
+}
+
+
+/* Login & Register Page*/
+
+.login_page, .register_page{
+    position: relative;
+    width: 40%;
+    max-height: 90%;
+    top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+}
+
+.login_page li, .login_page ul, .register_page li, .register_page ul{
+    list-style-type: none;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* tables */
+.for_table{
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    overflow-y: auto;
+}
+.for_table table{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3%;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.for_table table td{
+    width: 200px;
+    height: 35px;
+    border-top: 2px solid rgba(160, 191, 216, 0.555);
+}
+.for_table table a{
+    color: rgb(45, 115, 219);
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.for_table table th:last-child{
+    color: rgba(0, 0, 0, 0);
+}
+.for_table table tr:first-child{
+    position: relative;
+    top: -13px;
+}
+
+
+.small{
+    margin-top: 130px;
+    width: 25%;
+    height: 50%;
+}
+.table_form{
+    margin-top: 20%;
+}
+.table_form button{
+    position: relative;
+    top: 20px;
+    left: 100px;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    border-radius: 4px;
+    padding: 5px 24px;
+    letter-spacing: 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.6s;
+}
+.table_form button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* mailing general */
+.form_general{
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+}
+.row input{
+    width: 400px;
+    height: 25px;
+    border-radius: 5px 0px 0px 5px;
+    border: 2px solid black;
+    letter-spacing: 2px;
+}
+.row button{
+    height: 25px;
+    position: relative;
+    left: -6px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 0px 5px 5px 0px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.6s;
+}
+.row button:hover{
+    cursor: pointer;
+    background-color: rgb(66, 139, 221);
+    color: white;
+}
+
+.no_data {
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}

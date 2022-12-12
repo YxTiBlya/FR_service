@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="for_table">
+    <table>
+        <tr><th><a href="/mailing/add">Добавить</a></th></tr>
+        <tr>
+            <th>Id</th>
+            <th>Start time</th>
+            <th>Message</th>
+            <th>filters</th>
+            <th>End time</th>
+            <th>______________</th>
+        </tr>
+
+        {% for mailing in mailings %}
+        <tr>
+            <td>{{ mailing.id }}</td>
+            <td>{{ mailing.start_time }}</td>
+            <td>{{ mailing.message }}</td>
+            <td>{{ mailing.filters }}</td>
+            <td>{{ mailing.end_time }}</td>
+            <td><a href="/mailing/update/{{ mailing.id }}">Редактировать</a><a href="/mailing/delete/{{ mailing.id }}">Удалить</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

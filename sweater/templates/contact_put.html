@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="for_table small">
+    <form action="/contact/update/{{ contact.id }}" method="POST">
+        <table class="table_form">
+            <tr>
+                <td>Number*:</td>
+                <td><input type="text" required value="{{ contact.number }}" name="number"></td>
+            </tr>
+            <tr>
+                <td>Operator code*:</td>
+                <td><input type="text" required value="{{ contact.operator_code }}" name="operator_code"></td>
+            </tr>
+            <tr>
+                <td>Tag:</td>
+                <td><input type="text" value="{{ contact.tag }}" name="tag"></td>
+            </tr>
+            <tr>
+                <td>Timezone (GMT):</td>
+                <td><input type="text" value="{{ contact.time_zone }}" name="time_zone"></td>
+            </tr>
+            <tr>
+                <td><button type="submit">SEND</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+{% endblock %}

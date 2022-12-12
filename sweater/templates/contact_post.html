@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="for_table small">
+    <form action="/contact/add" method="POST">
+        <table class="table_form">
+            <tr>
+                <td>Number*:</td>
+                <td><input type="text" required name="number"></td>
+            </tr>
+            <tr>
+                <td>Operator code*:</td>
+                <td><input type="text" required name="operator_code"></td>
+            </tr>
+            <tr>
+                <td>Tag:</td>
+                <td><input type="text" name="tag"></td>
+            </tr>
+            <tr>
+                <td>Timezone (GMT):</td>
+                <td><input type="text" name="time_zone"></td>
+            </tr>
+            <tr>
+                <td><button type="submit">SEND</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+{% endblock %}

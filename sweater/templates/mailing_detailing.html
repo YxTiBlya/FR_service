@@ -1,0 +1,133 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="for_table">
+    <form action="/mailing_general" method="POST" class="form_general">
+        <div class="row">
+            <input type="text" placeholder="mailing id" name="id">
+            <button type="submit" class="right_field">SEARCH</button>
+        </div>
+    </form>
+
+    <div>
+    {% if mailing %}
+        <table>
+            <tr>
+                <td>Расслыка:</td>
+                <td>Id</td>
+                <td>Start time</td>
+                <td>Message</td>
+                <td>Filters</td>
+                <td>End time</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>{{ mailing.id }}</td>
+                <td>{{ mailing.start_time }}</td>
+                <td>{{ mailing.message }}</td>
+                <td>{{ mailing.filters }}</td>
+                <td>{{ mailing.end_time }}</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td>Кол-во сообщений:</td>
+                <td>{{ msg_count }}</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Успешно:</td>
+                <td>Id</td>
+                <td>Datetime</td>
+                <td>Status</td>
+                <td>Mailing id</td>
+                <td>Contact id</td>
+                </tr>
+            <tr>
+            {% for message in messages.Успешно %}
+                <tr>
+                    <td> </td>
+                    <td>{{ message.id }}</td>
+                    <td>{{ message.datetime}}</td>
+                    <td>{{ message.status }}</td>
+                    <td>{{ message.mailing_id }}</td>
+                    <td>{{ message.contact_id }}</td>
+                </tr>
+            {% endfor %}
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Не отправлено:</td>
+                <td>Id</td>
+                <td>Datetime</td>
+                <td>Status</td>
+                <td>Mailing id</td>
+                <td>Contact id</td>
+            </tr>
+            <tr>
+                {% for message in messages['Не отправлено'] %}
+                    <tr>
+                        <td> </td>
+                        <td>{{ message.id }}</td>
+                        <td>{{ message.datetime}}</td>
+                        <td>{{ message.status }}</td>
+                        <td>{{ message.mailing_id }}</td>
+                        <td>{{ message.contact_id }}</td>
+                    </tr>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Ожидается:</td>
+                <td>Id</td>
+                <td>Datetime</td>
+                <td>Status</td>
+                <td>Mailing id</td>
+                <td>Contact id</td>
+            </tr>
+            <tr>
+                {% for message in messages.Ожидается %}
+                    <tr>
+                        <td> </td>
+                        <td>{{ message.id }}</td>
+                        <td>{{ message.datetime}}</td>
+                        <td>{{ message.status }}</td>
+                        <td>{{ message.mailing_id }}</td>
+                        <td>{{ message.contact_id }}</td>
+                    </tr>
+                {% endfor %}
+            </tr>
+        </table>
+    {% else %}
+        <h4 class="no_data">Данных нет</h4>
+    {% endif %}
+    </div>
+</div>
+{% endblock %}

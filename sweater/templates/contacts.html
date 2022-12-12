@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="for_table">
+    <table>
+        <tr><th><a href="/contact/add">Добавить</a></th></tr>
+        <tr>
+            <th>Id</th>
+            <th>Number</th>
+            <th>Operator code</th>
+            <th>Tag</th>
+            <th>Timezone (GMT)</th>
+            <th>______________</th>
+        </tr>
+
+        {% for contact in contacts %}
+        <tr>
+            <td>{{ contact.id }}</td>
+            <td>{{ contact.number }}</td>
+            <td>{{ contact.operator_code }}</td>
+            <td>{{ contact.tag }}</td>
+            <td>{{ contact.time_zone }}</td>
+            <td><a href="/contact/update/{{ contact.id }}">Редактировать</a><a href="/contact/delete/{{ contact.id }}">Удалить</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

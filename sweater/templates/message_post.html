@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="for_table small">
+    <form action="/message/add" method="POST">
+        <table class="table_form">
+            <tr>
+                <td>Status*:</td>
+                <td><input type="text" required name="status"></td>
+            </tr>
+            <tr>
+                <td>Mailing id*:</td>
+                <td><input type="text" required name="mailing_id"></td>
+            </tr>
+            <tr>
+                <td>Contact id*:</td>
+                <td><input type="text" required name="contact_id"></td>
+            </tr>
+            <tr>
+                <td><button type="submit">SEND</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+{% endblock %}

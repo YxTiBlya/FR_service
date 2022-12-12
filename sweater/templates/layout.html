@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>FR Notifications</title>
+</head>
+<body>
+    <main>
+        <div class="nav">
+            <div class="width_class">
+                <div class="logo">
+                    <a href="/"><h3>FR Notifications</h3></a>
+                </div>
+                <div class="nav_btn">
+                    <ul>
+                        <li><a href="/contacts">CONTACTS</a></li>
+                        <li><a href="/mailings">MAILINGS</a></li>
+                        <li><a href="/mailing_general">MAILINGS GENERAL</a></li>
+                        <li><a href="/messages">MESSAGES</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        {% block content %}{% endblock %}
+        
+    </main>
+</body>
+</html>

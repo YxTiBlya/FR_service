@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="for_table small">
+    <form action="/mailing/add" method="POST">
+        <table class="table_form">
+            <tr>
+                <td>Start time*:</td>
+                <td><input type="datetime" required name="start_time"></td>
+            </tr>
+            <tr>
+                <td>Message*:</td>
+                <td><input type="text"required  name="message"></td>
+            </tr>
+            <tr>
+                <td>Filters*:</td>
+                <td><input type="text" required name="filters"></td>
+            </tr>
+            <tr>
+                <td>End time*:</td>
+                <td><input type="datetime" required name="end_time"></td>
+            </tr>
+            <tr>
+                <td><button type="submit">SEND</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+{% endblock %}

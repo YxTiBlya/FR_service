@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="for_table small">
+    <form action="/mailing/update/{{ mailing.id }}" method="POST">
+        <table class="table_form">
+            <tr>
+                <td>Start time*:</td>
+                <td><input type="text" required value="{{ mailing.start_time }}" name="start_time"></td>
+            </tr>
+            <tr>
+                <td>Message*:</td>
+                <td><input type="text" required value="{{ mailing.message }}" name="message"></td>
+            </tr>
+            <tr>
+                <td>Filters*:</td>
+                <td><input type="text" required value="{{ mailing.filters }}" name="filters"></td>
+            </tr>
+            <tr>
+                <td>End time*:</td>
+                <td><input type="text" required value="{{ mailing.end_time }}" name="end_time"></td>
+            </tr>
+            <tr>
+                <td><button type="submit">SEND</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+{% endblock %}

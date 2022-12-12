@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="for_table">
+    <table>
+        <tr><th><a href="/message/add">Добавить</a></th></tr>
+        <tr>
+            <th>Id</th>
+            <th>Datetime</th>
+            <th>Status</th>
+            <th>Mailing id</th>
+            <th>Contact id</th>
+            <th>______________</th>
+        </tr>
+
+        {% for message in messages %}
+        <tr>
+            <td>{{ message.id }}</td>
+            <td>{{ message.datetime }}</td>
+            <td>{{ message.status }}</td>
+            <td>{{ message.mailing_id }}</td>
+            <td>{{ message.contact_id }}</td>
+            <td><a href="/message/update/{{ message.id }}">Редактировать</a><a href="/message/delete/{{ message.id }}">Удалить</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
