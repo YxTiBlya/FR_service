@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    container_name: fr-postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data/pgdata
+      - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
+    environment:
+      PGDATA: /var/lib/postgresql/data/pgdata
+    env_file:
+      - .env
+    restart: always
+
+  api:
+    build:
+      dockerfile: Dockerfile.api
+    container_name: api_service
+    ports:
+      - 5000:5000
+    command: /api/wait-for-it.sh db:5432 -t 120 -- python api.py
+    volumes:
+      - ./logs/api_logs.log:/api/logs/logs.log
+    restart: always
+
+  mailer:
+    build:
+      dockerfile: Dockerfile.mailer
+    container_name: mailer_service
+    command: /mailer/wait-for-it.sh api:5000 -t 120 -- python mailer.py
+    volumes:
+      - ./logs/mailer_logs.log:/mailer/logs/logs.log
+    restart: always
