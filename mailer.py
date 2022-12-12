@@ -22,6 +22,9 @@ def mailer(mailing):
 
     for contact in contacts:
         datetime_now = datetime.datetime.now()
+
+        if datetime_now > mailing.end_time: break
+
         r = requests.get(f"{os.environ.get('API_ADDRES')}/api/messages", json={"query": [mailing.id, contact.id]})
 
         if r.status_code == 400:
